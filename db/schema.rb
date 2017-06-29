@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,14 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818195543) do
+ActiveRecord::Schema.define(version: 20170629004741) do
 
   create_table "horses", force: :cascade do |t|
-    t.text     "name"
-    t.integer  "age"
-    t.integer  "total_winnings"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.text "name"
+    t.integer "age"
+    t.integer "total_winnings"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "jockey_id"
+  end
+
+  create_table "jockeys", force: :cascade do |t|
+    t.string "name"
   end
 
 end

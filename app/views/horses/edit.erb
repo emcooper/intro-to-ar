@@ -1,0 +1,14 @@
+<h1>Edit Horse</h1>
+
+<form action = "/horses/<%= @horse.id %>" method = "post">
+  <input type = "hidden" name = "_method" value = "PUT">
+  <label>Name:</label>
+  <input type = "text" name = "horse[name]" value ="<%= @horse.name %>">
+  <label>Age:</label>
+  <input type = "text" name = "horse[age]" value ="<%= @horse.age %>">
+  <label>Total Winnings:</label>
+  <input type = "text" name = "horse[total_winnings]" value ="<%= @horse.total_winnings %>">
+  <label>Jockey Id:</label>
+  <input type = "text" name = "horse[jockey_id]" value ="<%= @horse.jockey_id %>">
+  <input type = "submit">
+</form>
